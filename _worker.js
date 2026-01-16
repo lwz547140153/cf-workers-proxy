@@ -7,6 +7,7 @@ function logError(request, message) {
 }
 
 function createNewRequest(request, url, proxyHostname, originHostname) {
+  
   const newRequestHeaders = new Headers(request.headers);
   for (const [key, value] of newRequestHeaders) {
     if (value.includes(originHostname)) {
